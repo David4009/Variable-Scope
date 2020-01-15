@@ -1,0 +1,36 @@
+1. What is scope? Your explanation should include the idea of global vs. block scope.
+
+Answer: 
+Each function creates a new scope. Scope determines the accessibility (visibility) of these variables.
+Variables defined inside a function are not accessible (visible) from outside the function.  
+When you declare a variable in the global scope, it is available everywhere in your code.
+Any variable that is declared outside of a function in JavaScript has global scope. Any variable declared inside of a function 
+has local scope. 
+A block scope is the area within if, switch conditions or for and while loops. Generally speaking, whenever you see 
+{curly brackets}, it is a block. In ES6, const and let keywords allow developers to declare variables in the block scope, 
+which means those variables exist only within the corresponding block.
+
+2. Why are global variables avoided?
+
+Answer:
+Global variables tend to make unintended side effects in a program more likely. The combination of global variables and 
+unintended side effects almost always guarantees that code becomes indeterminate. An indeterminate function is one 
+that — given a single set of inputs — returns one value some times and another at other times. This can lead to frustrating 
+and hard-to-track-down bugs in your code.
+
+3. Explain JavaScript's strict mode
+
+Answer:
+When strict mode is enabled, any time a variable is declared without the let or const keyword, an error will be triggered.
+Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, 
+in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. 
+The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of 
+JavaScript.
+
+4. What are side effects, and what is a pure function?
+
+Answer:
+A side effect is when a function reaches outside its local scope up into a parent scope and alters a value that lives there. 
+It is also any application state change that is observable outside the called function other than its return value. 
+A function is said to be pure when it is both determinate and has no side effects. A function is pure when the desired outcome
+is all that is accomplished. 
